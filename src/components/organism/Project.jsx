@@ -1,5 +1,5 @@
 import Icon from "../atom/Icon";
-import { faAlignJustify } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
 
 export default function Project() {
@@ -108,7 +108,7 @@ export default function Project() {
                   target="_blank"
                   className="text-slate-400 hover:text-slate-900"
                 >
-                  <Icon icon={faAlignJustify} />
+                  <Icon icon={faGithub} />
                 </a>
               </div>
             </div>

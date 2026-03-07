@@ -1,25 +1,29 @@
 import Icon from "../atom/Icon";
-import { faArrowsRotate } from "@fortawesome/free-solid-svg-icons";
+import {
+  faGithub,
+  faInstagram,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function Contac() {
   const socialLinks = [
     {
       name: "WhatsApp",
-      icon: faArrowsRotate,
+      icon: faWhatsapp,
       color: "text-green-600",
       link: "https://wa.me/584241736193",
       value: "+58 424 173 6193",
     },
     {
       name: "Instagram",
-      icon: faArrowsRotate,
+      icon: faInstagram,
       color: "text-pink-600",
       link: "https://www.instagram.com/bafaf03/",
       value: "@bafaf03",
     },
     {
       name: "GitHub",
-      icon: faArrowsRotate,
+      icon: faGithub,
       color: "text-slate-800",
       link: "https://github.com/Bafaf23",
       value: "Bafaf23",
