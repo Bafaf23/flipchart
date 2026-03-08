@@ -1,25 +1,33 @@
 import Icon from "../atom/Icon";
 import {
-  faRedoAlt,
-  faJs,
-  faGauge,
+  faGit,
+  faGithub,
+  faJsSquare,
+  faNodeJs,
+  faPython,
+  faReact,
+  faSass,
+  faTailwindCss,
+} from "@fortawesome/free-brands-svg-icons";
+import {
   faCode,
-  faGroupArrowsRotate,
   faGraduationCap,
+  faN,
+  faC,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Education() {
   const techStack = [
-    { name: "React", icon: faRedoAlt, color: "text-blue-500" },
-    { name: "Tailwind", icon: faRedoAlt, color: "text-cyan-400" },
-    { name: "JavaScript", icon: faRedoAlt, color: "text-yellow-500" },
-    { name: "Node.js", icon: faRedoAlt, color: "text-green-600" },
-    { name: "SASS", icon: faRedoAlt, color: "text-pink-500" },
-    { name: "Git", icon: faRedoAlt, color: "text-orange-600" },
-    { name: "Next.js", icon: faRedoAlt, color: "text-black" },
-    { name: "Python", icon: faRedoAlt, color: "text-blue-500" },
-    { name: "Cursor", icon: faRedoAlt, color: "text-black" },
-    { name: "GitHub", icon: faRedoAlt, color: "text-gray-500" },
+    { name: "React", icon: faReact, color: "text-blue-500" },
+    { name: "Tailwind", icon: faTailwindCss, color: "text-cyan-400" },
+    { name: "JavaScript", icon: faJsSquare, color: "text-yellow-500" },
+    { name: "Node.js", icon: faNodeJs, color: "text-green-600" },
+    { name: "SASS", icon: faSass, color: "text-pink-500" },
+    { name: "Git", icon: faGit, color: "text-orange-600" },
+    { name: "Next.js", icon: faN, color: "text-black" },
+    { name: "Python", icon: faPython, color: "text-blue-500" },
+    { name: "Cursor", icon: faC, color: "text-black" },
+    { name: "GitHub", icon: faGithub, color: "text-gray-500" },
   ];
   return (
     <section className="bg-white px-6 py-20" id="education">
