@@ -26,30 +26,30 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="flex flex-col border-t border-slate-200 bg-slate-50 p-6">
+    <footer className="flex flex-col border-t border-slate-200 bg-purple-600 p-6">
       <div className="mx-auto flex w-full max-w-6xl items-start justify-between">
         <div className="py-2">
           <Logo />
         </div>
 
         <div className="flex flex-col gap-3">
-          <h2 className="text-sm font-bold tracking-widest text-slate-400 uppercase">
+          <h2 className="text-sm font-bold tracking-widest text-slate-100 uppercase">
             Info
           </h2>
           <div className="flex flex-col gap-4">
             {infoInterest.map((info, index) => (
               <div key={index} className="flex items-start gap-3">
-                <span className="mt-1 text-slate-400">
+                <span className="mt-1 text-pink-500">
                   <Icon icon={info.icon} />
                 </span>
                 <div className="flex flex-col">
                   <span
-                    className={`text-lg leading-tight ${info.availability ? "font-medium text-slate-700" : "text-slate-500"}`}
+                    className={`text-lg leading-tight ${info.availability ? "font-medium text-slate-50" : "text-slate-50"}`}
                   >
                     {info.name}
                   </span>
                   {info.availability && (
-                    <span className="mt-1 w-fit rounded-full bg-pink-50 px-1.5 py-0.5 text-[10px] font-bold text-pink-500 uppercase">
+                    <span className="mt-1 w-fit rounded-full bg-orange-500/20 px-1.5 py-0.5 text-[10px] font-bold text-orange-500 uppercase">
                       Disponible para trabajo
                     </span>
                   )}
@@ -60,8 +60,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="mt-10 border-t border-slate-100 pt-4">
-        <p className="text-center font-mono text-xs text-slate-400">
+      <div className="mt-10 border-t border-gray-300/40 pt-4">
+        <p className="text-center font-mono text-xs text-slate-100">
           v{packageInfo.version}
         </p>
       </div>
