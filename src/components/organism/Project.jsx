@@ -32,7 +32,7 @@ export default function Project() {
       favorito: false,
     },
     {
-      title: "Proyecto final de JavaScript",
+      title: "RBO, la mejor forma de organizar tus finanzas",
       img: "/RBO.jpeg",
       desc: "Poryecto de app web financiera. Desarrollado con JS valina.",
       tags: ["SASS", "HTML", "JavaScript"],
@@ -41,9 +41,9 @@ export default function Project() {
       favorito: true,
     },
     {
-      title: "Proyecto final de Next.js",
+      title: "Attakon titan, page character",
       img: "/attackontitan.jpg",
-      desc: "Profundizar en la tecnologia más famosa del mercardo, eso es lo que buscamos con este proyecto",
+      desc: "Pagina donde consultar info de los personajes de attakon titan.",
       tags: ["Next.js", "HTML", "JavaScript", "React"],
       link: "https://attakontitan.vercel.app/",
       repo: "https://github.com/Bafaf23/attakontitan",
@@ -51,7 +51,7 @@ export default function Project() {
     },
   ];
   return (
-    <section className="mt-5 bg-gray-100 p-3 py-20" id="project">
+    <section className="bg-gray-100 p-3 py-20 dark:bg-slate-800" id="project">
       <div className="flex justify-center bg-linear-to-r from-cyan-500 via-purple-500 to-pink-500 bg-clip-text p-2 text-3xl font-bold text-transparent">
         <h2>Mis Proyectos</h2>
       </div>
@@ -60,7 +60,7 @@ export default function Project() {
         {proyectos.map((p, index) => (
           <div
             key={index}
-            className={`overflow-hidden rounded-2xl border bg-white shadow-xl transition-transform duration-300 hover:scale-[1.02] ${p.favorito ? "border-cyan-500 shadow-blue-100" : "border-transparent"}`}
+            className={`overflow-hidden rounded-2xl border bg-white shadow-xl transition-transform duration-300 hover:scale-[1.02] dark:border-slate-800 dark:bg-slate-900 ${p.favorito ? "border-cyan-500 shadow-blue-100 dark:shadow-slate-700" : "border-transparent"}`}
           >
             {/* Contenedor de Imagen con Relativo para 'fill' */}
             <div className="relative h-48 w-full">
@@ -69,7 +69,7 @@ export default function Project() {
                 alt={p.title}
                 fill
                 className="object-cover"
-                unoptimized={p.img.includes("googleusercontent")} // Hack por si la URL de Google es vieja
+                unoptimized={p.img.includes("googleusercontent")}
               />
             </div>
 
@@ -79,16 +79,18 @@ export default function Project() {
                   ⭐ Destacado
                 </span>
               )}
-              <h3 className="mb-2 text-2xl font-bold text-slate-800">
+              <h3 className="mb-2 text-2xl font-bold text-slate-800 dark:text-slate-100">
                 {p.title}
               </h3>
-              <p className="mb-4 text-sm text-slate-600">{p.desc}</p>
+              <p className="mb-4 text-sm text-slate-600 dark:text-slate-400">
+                {p.desc}
+              </p>
 
               <div className="mb-6 flex flex-wrap gap-2">
                 {p.tags.map((tag, i) => (
                   <span
                     key={i}
-                    className="rounded-full bg-slate-100 px-3 py-1 text-[10px] font-bold text-slate-600 uppercase"
+                    className="rounded-full bg-slate-100 px-3 py-1 text-[10px] font-bold text-slate-600 uppercase dark:bg-slate-700 dark:text-slate-200"
                   >
                     {tag}
                   </span>
