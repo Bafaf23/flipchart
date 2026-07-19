@@ -49,6 +49,15 @@ export default function Project() {
       repo: "https://github.com/Bafaf23/attakontitan",
       favorito: false,
     },
+    {
+      title: "ORDER",
+      img: "/order3.png",
+      desc: "Herramineta web diseñada para automatizar la gestión de inventarios y la generación de órdenes de compra a partir del procesamiento de archivos de hojas de cálculo (Excel/CSV).",
+      tags: ["Talwindcss", "Flask", "Python"],
+      link: "https://order-production-a07a.up.railway.app/",
+      repo: "https://github.com/Bafaf23/order",
+      favorito: true,
+    },
   ];
   return (
     <section className="bg-gray-100 p-3 py-20 dark:bg-slate-800" id="project">
@@ -108,7 +117,7 @@ export default function Project() {
                 <a
                   href={p.repo}
                   target="_blank"
-                  className="text-slate-400 hover:text-slate-900"
+                  className="text-slate-400 hover:text-slate-500"
                 >
                   <Icon icon={faGithub} />
                 </a>
