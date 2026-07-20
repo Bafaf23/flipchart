@@ -3,23 +3,23 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="bg-linear-to-b from-white to-slate-50 px-6 py-10 dark:from-gray-700 dark:to-slate-800">
+    <section className="bg-f3 dark:bg-f4 px-6 py-10 dark:from-gray-700 dark:to-slate-800 min-h-screen flex justify-center">
       <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2">
         <div className="relative z-10 space-y-6">
-          <span className="inline-block rounded-full bg-purple-100 px-4 py-1.5 text-sm font-bold text-purple-700 dark:bg-purple-300/70">
+          <span className="inline-block rounded-full bg-purple-100 px-4 py-1.5 text-sm font-bold text-purple-700 dark:bg-purple-800/40 dark:text-purple-600">
             Disponible para proyectos
           </span>
 
-          <h2 className="text-5xl leading-tight font-black text-slate-900 md:text-6xl dark:text-slate-200">
+          <h2 className="text-5xl leading-tight font-black text-slate-900 md:text-6xl dark:text-100">
             Diseño y desarrollo <br />
             <span className="text-purple-600 dark:text-pink-500">
               experiencias digitales.
             </span>
           </h2>
 
-          <p className="max-w-lg text-lg text-slate-600 dark:text-slate-300">
+          <p className="max-w-lg text-lg text-slate-600 dark:text-100">
             Hola, soy{" "}
-            <span className="font-bold text-slate-800 dark:text-slate-100">
+            <span className="font-bold text-slate-800 dark:text-green-500">
               Bryant
             </span>
             . Desarrollador enfocado en crear soluciones modernas, limpias y
@@ -29,13 +29,13 @@ export default function Hero() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="#project"
-              className="rounded-xl bg-slate-900 px-8 py-4 font-bold text-white shadow-lg shadow-slate-200 transition-all hover:bg-slate-800 dark:shadow-slate-700"
+              className="rounded-xl bg-slate-900 px-8 py-4 font-bold text-white shadow-xl shadow-slate-950/20 transition-all hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-slate-950/30 dark:bg-emerald-600 dark:text-slate-950 dark:shadow-emerald-950/30 dark:hover:bg-emerald-500 dark:hover:shadow-emerald-950/50"
             >
               Ver Proyectos
             </Link>
             <Link
-              href="#contac"
-              className="rounded-xl border-2 border-slate-200 px-8 py-4 font-bold text-slate-700 transition-all hover:border-pink-600 hover:text-pink-600 dark:text-slate-100"
+              href="#contacto"
+              className="rounded-xl border-2 border-slate-300 px-8 py-4 font-bold text-slate-700 transition-all hover:border-pink-600 hover:text-pink-600 hover:bg-emerald-50/30 dark:border-slate-700 dark:text-slate-200 dark:hover:border-emerald-400 dark:hover:text-emerald-400 dark:hover:bg-emerald-950/20"
             >
               Hablemos
             </Link>
@@ -72,7 +72,7 @@ export default function Hero() {
             {/* La "B" de Bryant - Rosa/Pink */}
             <div className="absolute bottom-[30%] left-[90%] rotate-10 animate-bounce opacity-15 [animation-duration:6s]">
               <span className="font-mono text-3xl text-pink-600/60 dark:text-pink-400/40">
-                {"B"}
+                {"<?php?>"}
               </span>
             </div>
 

@@ -2,6 +2,8 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-html {
-  scroll-behavior: smooth;
+@theme {
+  --color-f3: #f3f3f2;
+  --color-f4: #121212;
+  --color-100: #f3f3f2;
 }

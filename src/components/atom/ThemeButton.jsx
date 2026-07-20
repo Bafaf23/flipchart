@@ -1,14 +1,17 @@
 "use client";
 import { useTheme } from "@/contexts/ThemeContext";
+import Icon from "./Icon";
+import { faMonero } from "@fortawesome/free-brands-svg-icons";
+import { faMoon, faSoap, faSun } from "@fortawesome/free-solid-svg-icons";
 
 export default function ThemeButton() {
   const { theme, toggleTheme } = useTheme();
   return (
     <button
       onClick={toggleTheme}
-      className="rounded-2xl p-1 font-medium text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+      className="font-medium text-slate-800 hover:text-zinc-500 dark:text-slate-100 cursor-pointer text-xl hover:-rotate-45 transition-all hover:dark:text-amber-400"
     >
-      {theme == "light" ? "🌙 Modo Oscuro" : "☀️ Modo Claro"}
+      {theme == "light" ? <Icon icon={faMoon} /> : <Icon icon={faSun} />}
     </button>
   );
 }
