@@ -1,4 +1,5 @@
 import Icon from "../atom/Icon";
+
 import "animate.css";
 import {
   faCss,
@@ -79,7 +80,7 @@ export default function Education() {
         </div>
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-          <div className="space-y-8">
+          <div className="space-y-8" data-aos="fade-right">
             {/* Título de la Sección */}
             <div className="flex items-center gap-3">
               <h3 className="flex items-center gap-2 text-2xl font-bold text-slate-800 dark:text-slate-100">
@@ -111,7 +112,7 @@ export default function Education() {
             </div>
           </div>
 
-          <div>
+          <div data-aos="fade-left">
             <h3 className="mb-8 flex items-center gap-2 text-2xl font-bold text-slate-900 dark:text-100">
               <Icon icon={faCode} />
               Stack Tecnológico

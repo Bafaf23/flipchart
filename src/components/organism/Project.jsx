@@ -3,7 +3,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
 
 export default function Project() {
-  const proyectos = [
+  const project = [
     {
       title: "Instagram Clone",
       img: "https://www.trecebits.com/wp-content/uploads/2022/05/Instagram-nuevo-logo.jpg.webp",
@@ -60,64 +60,87 @@ export default function Project() {
     },
   ];
   return (
-    <section className="bg-gray-100 p-3 py-20 dark:bg-slate-800" id="project">
-      <div className="flex justify-center bg-linear-to-r from-cyan-500 via-purple-500 to-pink-500 bg-clip-text p-2 text-3xl font-bold text-transparent">
+    <section className="bg-f3 p-3 py-20 dark:bg-f4" id="project">
+      <div className="flex justify-center p-2 text-4xl font-black dark:text-100 text-slate-800">
         <h2>Mis Proyectos</h2>
       </div>
 
       <div className="mx-auto mt-8 grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {proyectos.map((p, index) => (
+        {project.map((p, index) => (
           <div
             key={index}
-            className={`overflow-hidden rounded-2xl border bg-white shadow-xl transition-transform duration-300 hover:scale-[1.02] dark:border-slate-800 dark:bg-slate-900 ${p.favorito ? "border-cyan-500 shadow-blue-100 dark:shadow-slate-700" : "border-transparent"}`}
+            className={`relative flex flex-col justify-between overflow-hidden rounded-2xl border bg-white/40 shadow-xl backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:bg-slate-900/40 ${
+              p.favorito
+                ? "border-cyan-500 shadow-cyan-500/10 dark:shadow-cyan-400/5"
+                : "border-slate-300/60 dark:border-slate-800/80 shadow-black/5 dark:shadow-black/40"
+            }`}
           >
-            {/* Contenedor de Imagen con Relativo para 'fill' */}
-            <div className="relative h-48 w-full">
-              <Image
-                src={p.img}
-                alt={p.title}
-                fill
-                className="object-cover"
-                unoptimized={p.img.includes("googleusercontent")}
-              />
-            </div>
-
-            <div className="relative p-6">
-              {p.favorito && (
-                <span className="absolute -top-4 right-4 rounded-full bg-yellow-400 px-2 py-1 text-xs font-bold text-slate-900 shadow-sm">
-                  ⭐ Destacado
-                </span>
-              )}
-              <h3 className="mb-2 text-2xl font-bold text-slate-800 dark:text-slate-100">
-                {p.title}
-              </h3>
-              <p className="mb-4 text-sm text-slate-600 dark:text-slate-400">
-                {p.desc}
-              </p>
-
-              <div className="mb-6 flex flex-wrap gap-2">
-                {p.tags.map((tag, i) => (
-                  <span
-                    key={i}
-                    className="rounded-full bg-slate-100 px-3 py-1 text-[10px] font-bold text-slate-600 uppercase dark:bg-slate-700 dark:text-slate-200"
-                  >
-                    {tag}
-                  </span>
-                ))}
+            {/* Parte Superior: Imagen e Información */}
+            <div>
+              {/* Contenedor de Imagen con parche de hidratación */}
+              <div
+                className="relative h-48 w-full overflow-hidden"
+                suppressHydrationWarning
+              >
+                <Image
+                  src={p.img}
+                  alt={p.title}
+                  fill
+                  sizes="(max-w-768px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-500 hover:scale-105"
+                  unoptimized={p.img.includes("googleusercontent")}
+                  priority={index < 2}
+                />
               </div>
 
-              <div className="flex items-center justify-between">
+              <div className="relative p-6 pb-0">
+                {p.favorito && (
+                  <span className="absolute -top-4 right-4 rounded-full bg-gradient-to-r from-amber-400 to-yellow-400 px-3 py-1 text-xs font-black text-slate-900 shadow-md">
+                    ⭐ Destacado
+                  </span>
+                )}
+
+                <h3 className="mb-2 text-2xl font-bold text-slate-800 dark:text-slate-100">
+                  {p.title}
+                </h3>
+
+                <p className="mb-4 text-sm text-slate-600 dark:text-slate-400">
+                  {p.desc}
+                </p>
+
+                <div className="mb-6 flex flex-wrap gap-2">
+                  {p.tags.map((tag, i) => (
+                    <span
+                      key={i}
+                      className="rounded-full bg-slate-200/60 px-3 py-1 text-[10px] font-bold uppercase text-slate-700 dark:bg-slate-800/80 dark:text-slate-200"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Parte Inferior: Botones de Acción (Siempre alineados abajo) */}
+            <div className="p-6 pt-4">
+              <div className="flex items-center justify-between gap-4">
+                {/* Botón Demo Estilo Esmeralda */}
                 <a
                   href={p.link}
                   target="_blank"
-                  className="text-sm font-bold text-cyan-600 hover:underline"
+                  rel="noopener noreferrer"
+                  className="flex-1 rounded-xl bg-slate-900 px-4 py-2.5 text-center text-sm font-bold text-white shadow-md shadow-slate-950/10 transition-all hover:bg-slate-800 dark:bg-emerald-600 dark:text-slate-950 dark:shadow-emerald-950/20 dark:hover:bg-emerald-500"
                 >
                   Ver Demo
                 </a>
+
+                {/* Botón GitHub Estilo Glass */}
                 <a
                   href={p.repo}
                   target="_blank"
-                  className="text-slate-400 hover:text-slate-500"
+                  rel="noopener noreferrer"
+                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-300 bg-white/50 text-xl text-slate-700 shadow-sm transition-all hover:bg-slate-100 hover:text-slate-900 dark:border-slate-700 dark:bg-slate-800/50 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white"
+                  title="Ver Repositorio"
                 >
                   <Icon icon={faGithub} />
                 </a>
