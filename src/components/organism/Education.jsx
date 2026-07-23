@@ -20,6 +20,7 @@ import {
   faN,
   faC,
   faDatabase,
+  faLeaf,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Education() {
@@ -33,13 +34,15 @@ export default function Education() {
     "text-blue-500":
       "hover:border-blue-500/40 dark:hover:border-blue-500/30 hover:bg-blue-500/5",
     "text-black":
-      "hover:border-slate-500/40 dark:hover:border-slate-400/30 hover:bg-slate-500/5 dark:text-slate-100", // Ajuste para Next.js en oscuro
+      "hover:border-slate-500/40 dark:hover:border-slate-400/30 hover:bg-slate-500/5 dark:text-slate-100",
     "text-green-600":
       "hover:border-green-600/40 dark:hover:border-green-600/30 hover:bg-green-600/5",
-    "text-cyan-400":
+    "text-cyan-500":
       "hover:border-cyan-400/40 dark:hover:border-cyan-400/30 hover:bg-cyan-400/5",
     "text-pink-500":
       "hover:border-pink-500/40 dark:hover:border-pink-500/30 hover:bg-pink-500/5",
+    "text-gray-500":
+      "hover:border-gray-500/40 dark:hover:border-gray-500/30 hover:bg-gray-500/5",
   };
 
   /**
@@ -58,17 +61,22 @@ export default function Education() {
     { name: "Node.js", icon: faNodeJs, color: "text-green-600" },
 
     //* libreias css
-    { name: "Tailwind", icon: faTailwindCss, color: "text-cyan-400" },
+    { name: "Tailwind", icon: faTailwindCss, color: "text-cyan-500" },
     { name: "SASS", icon: faSass, color: "text-pink-500" },
 
     // * dataBase
     { name: "SQL", icon: faDatabase, color: "text-blue-500" },
     { name: "PostgresSQL", icon: faPostgresql, color: "text-cyan-500" },
+    {
+      name: "MongoDB",
+      icon: faLeaf,
+      color: "text-green-600",
+    },
 
     //* otros
     { name: "Cursor", icon: faC, color: "text-black" },
     { name: "GitHub", icon: faGithub, color: "text-gray-500" },
-    { name: "Git", icon: faGit, color: "text-orange-600" },
+    { name: "Git", icon: faGit, color: "text-orange-500" },
   ];
   return (
     <section className="bg-f3 dark:bg-f4 px-6 py-20" id="education">
